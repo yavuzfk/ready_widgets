@@ -47,6 +47,29 @@ class _UserMessageWidgetsState extends State<UserMessageWidgets> {
                   ).show(context);
                 },
                 child: const Text('Flush Bar with packet')),
+            ElevatedButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                            height: 400,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  child: Text("dasfsdf"),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                                const Text(
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unkno")
+                              ],
+                            ));
+                      });
+                },
+                child: Text("Bottom Sheet"))
           ],
         ),
       ),
