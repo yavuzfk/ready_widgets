@@ -21,6 +21,33 @@ class _UserMessageWidgetsState extends State<UserMessageWidgets> {
           children: [
             ElevatedButton.icon(
               icon: const Icon(
+                Icons.upgrade_outlined,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                ScaffoldMessenger.of(context).showMaterialBanner(
+                  MaterialBanner(
+                    content: const Text('Material Banner'),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          ScaffoldMessenger.of(context)
+                              .hideCurrentMaterialBanner();
+                        },
+                        child: const Text('Close'),
+                      )
+                    ],
+                  ),
+                );
+              },
+              label: const Text('Top Banner'),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 11, 184, 89),
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)))),
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(
                 Icons.search,
                 color: Colors.black,
               ),
@@ -58,7 +85,7 @@ class _UserMessageWidgetsState extends State<UserMessageWidgets> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 ElevatedButton(
-                                  child: Text("dasfsdf"),
+                                  child: const Text("dasfsdf"),
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
@@ -69,7 +96,7 @@ class _UserMessageWidgetsState extends State<UserMessageWidgets> {
                             ));
                       });
                 },
-                child: Text("Bottom Sheet"))
+                child: const Text("Bottom Sheet"))
           ],
         ),
       ),
