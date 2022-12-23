@@ -1,4 +1,5 @@
 import 'package:another_flushbar/flushbar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ready_widgets/atoms/bottom_message.dart';
 import 'package:ready_widgets/atoms/divider_with_text.dart';
@@ -121,6 +122,50 @@ class _UserMessageWidgetsState extends State<UserMessageWidgets> {
                             });
                       },
                       child: const Text("Bottom Sheet")),
+                  Center(
+                    child: SizedBox(
+                      width: 100,
+                      height: 100,
+                      child: CupertinoContextMenu(
+                        actions: <Widget>[
+                          CupertinoContextMenuAction(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            isDefaultAction: true,
+                            trailingIcon: CupertinoIcons.doc_on_clipboard_fill,
+                            child: const Text('Copy'),
+                          ),
+                          CupertinoContextMenuAction(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            trailingIcon: CupertinoIcons.share,
+                            child: const Text('Share'),
+                          ),
+                          CupertinoContextMenuAction(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            trailingIcon: CupertinoIcons.heart,
+                            child: const Text('Favorite'),
+                          ),
+                          CupertinoContextMenuAction(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            isDestructiveAction: true,
+                            trailingIcon: CupertinoIcons.delete,
+                            child: const Text('Delete'),
+                          ),
+                        ],
+                        child: Container(
+                          color: CupertinoColors.systemYellow,
+                          child: const FlutterLogo(size: 500.0),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
               Container(
