@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ready_widgets/atoms/red_ince_divider.dart';
+import 'package:ready_widgets/core/atoms/red_ince_divider.dart';
 
 class DividerWithText extends StatelessWidget {
   const DividerWithText({

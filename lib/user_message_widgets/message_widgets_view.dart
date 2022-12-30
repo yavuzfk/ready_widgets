@@ -1,8 +1,8 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ready_widgets/atoms/bottom_message.dart';
-import 'package:ready_widgets/atoms/divider_with_text.dart';
+import 'package:ready_widgets/core/atoms/bottom_message.dart';
+import 'package:ready_widgets/core/atoms/divider_with_text.dart';
 
 class UserMessageWidgets extends StatefulWidget {
   const UserMessageWidgets({Key? key}) : super(key: key);
