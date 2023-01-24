@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ready_widgets/user_message_widgets/message_widgets_view.dart';
+import 'package:ready_widgets/widgets/cards/cards_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: Colors.amber.shade100),
-        home: const UserMessageWidgets());
+        home: const CardsView());
   }
 }
