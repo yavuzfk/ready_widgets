@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ready_widgets/widgets/cards/left_to_right_card.dart';
-import 'package:ready_widgets/widgets/cards/scroll_card.dart';
+import 'package:ready_widgets/widgets/cards/widgets/left_to_right_card.dart';
+import 'package:ready_widgets/widgets/cards/widgets/scroll_card.dart';
 
 class CardsView extends StatefulWidget {
   const CardsView({Key? key}) : super(key: key);
